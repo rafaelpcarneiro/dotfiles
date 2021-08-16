@@ -1,27 +1,27 @@
 # dotfiles
 
 All my config files are here. They are
-    - **bashrc**:
-         configurations for the terminal, such as the PS1 info, a
-         function to synchronize my local repository with my github
-         account using ssh, and some others;
+- **bashrc**:
+     configurations for the terminal, such as the PS1 info, a
+     function to synchronize my local repository with my github
+     account using ssh, and some others;
 
-    - **vimrc**:
-         configurations for VIM;
+- **vimrc**:
+     configurations for VIM;
 
-    - **i3config**:
-         small changes on the configuration done automatically by i3;
+- **i3config**:
+     small changes on the configuration done automatically by i3;
 
-    - **i3blocks.conf**:
-         settings regarding what informations will be displayed at the
-         status bar. I use i3blocks instead of i3status;
+- **i3blocks.conf**:
+     settings regarding what informations will be displayed at the
+     status bar. I use i3blocks instead of i3status;
 
-    - **xsession**:
-         configuration for the X session;
+- **xsession**:
+     configuration for the X session;
 
-    - **Xresources**: 
-        the configurations for the Urxvt terminal, regarding its
-        appearance;
+- **Xresources**: 
+    the configurations for the Urxvt terminal, regarding its
+    appearance;
 
 
 **Obs1**: On the **xsession** file:
