@@ -1,0 +1,19 @@
+! vim: set foldmethod=marker:
+
+URxvt.font: 	  xft:DejaVu Sans Mono:style=Regular:pixelsize=17:antialias=true
+URxvt.boldfont:   xft:DejaVu Sans Mono:style=Bold:pixelsize=17:antialias=true
+URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=17:antialias=true
+
+URxvt.letterSpace: -1
+
+URxvt.scrollBar:   False
+URxvt.cursorBlink: True
+URxvt.dpi: 	       96
+URxvt.antialias:   True
+URxvt.rgba:	       rgb
+
+
+!! Color
+URxvt.foreground: green
+URxvt.background: black
+URxvt.cursorColor: red
