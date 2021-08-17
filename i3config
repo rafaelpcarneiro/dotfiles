@@ -9,8 +9,13 @@
 # windows key combinations
 set $mod Mod4
 
-font pango:monospace 8
-font pango:DejaVu Sans Mono 8
+#font pango:monospace 0
+
+# hide the bar appearing at top of any window oppened. Apparently, the
+# utility of such bars is to give a brief description of the working
+# windows. Such capibility however has not shown to be useful until now
+# so I set it to zero
+font pango:DejaVu Sans Mono 0 
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
