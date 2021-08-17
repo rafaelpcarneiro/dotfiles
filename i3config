@@ -9,8 +9,8 @@
 # windows key combinations
 set $mod Mod4
 
-font pango:monospace 10
-font pango:DejaVu Sans Mono 10
+font pango:monospace 8
+font pango:DejaVu Sans Mono 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -141,5 +141,6 @@ exec  --no-startup-id feh --bg-fill /home/rafael/Images/walpaper/shot0050.png
 
 ## i3blocks
 bar {
+    font pango:DejaVu Sans Mono 10
     status_command i3blocks
 }
