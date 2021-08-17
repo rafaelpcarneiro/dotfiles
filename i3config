@@ -16,7 +16,7 @@ font pango:DejaVu Sans Mono 10
 # utility of such bars is to give a brief description of the working
 # windows. Such capibility however has not shown to be useful until now
 # so I set it to zero
-default_border pixel 0
+default_border pixel 2
 
 
 
