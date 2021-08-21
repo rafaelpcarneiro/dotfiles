@@ -85,12 +85,18 @@ print_ps1() {
 PS1="\$(print_ps1)"
 # }}}
 
-#|--- Function to synchronize github repository with my local machine, using ssh {{{1
+# Function to synchronize github repository with my local machine, using
+# ssh
 sync_git_ssh () {
 	local _proj=`pwd|grep -o -P "/[^/]*$"|cut -c2-`
 	git remote set-url origin "git@github.com:rafaelpcarneiro/${_proj}.git"
 }
-# 1}}}
+
+# Git commit + git push (using ssh)
+gitcommit () {
+    git commit -a -m "$1"
+    git push origin master
+}
 
 
 # Set twitter credentials as environment variables

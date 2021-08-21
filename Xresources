@@ -1,10 +1,14 @@
 ! vim: set foldmethod=marker:
 
-URxvt.font: 	  xft:DejaVu Sans Mono:style=Regular:pixelsize=17:antialias=true
-URxvt.boldfont:   xft:DejaVu Sans Mono:style=Bold:pixelsize=17:antialias=true
-URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=17:antialias=true
+!URxvt.font: 	  xft:DejaVu Sans Mono:style=Regular:pixelsize=17:antialias=true
+!URxvt.boldfont:   xft:DejaVu Sans Mono:style=Bold:pixelsize=17:antialias=true
+!URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=17:antialias=true
 
-URxvt.letterSpace: -1
+URxvt.font: 	  xft:JuliaMono:style=Regular:pixelsize=18:antialias=true
+URxvt.boldfont:   xft:JuliaMono:style=Bold:pixelsize=18:antialias=true
+URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=18:antialias=true
+
+!URxvt.letterSpace: -1
 
 URxvt.scrollBar:   False
 URxvt.cursorBlink: True

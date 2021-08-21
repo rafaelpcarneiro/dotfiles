@@ -24,8 +24,6 @@ set scrolloff=999
 set incsearch
 
 
-nnoremap J 10j
-nnoremap K 10k
 
 " Formatting paragraph -- needs the par program
 set formatprg=par
@@ -34,13 +32,13 @@ hi LineNr  ctermfg=gray
 hi Normal  ctermfg=255
 
 " set parameters for the directory tree Netrw
-let g:netrw_liststyle=2
+let g:netrw_liststyle=0
 let g:netrw_banner=0
 let g:netrw_browse_split=3
 let g:netrw_winsize = 25
 
 set colorcolumn=81
-set textwidth=80
+"set textwidth=80
 hi ColorColumn ctermbg=235
 
 
@@ -58,6 +56,15 @@ nnoremap <leader>sf :w<cr> :source %<cr>
 nnoremap <leader>hf $:call MyHFill()<cr>
 nnoremap <leader>cf 81\|d$
 
+" Movements
+nnoremap J 10j
+nnoremap K 10k
+nnoremap H 0
+nnoremap L $
+
+" inseert the line where you are above
+nnoremap <leader>P 0v$dk$pjdd
+
 "===============================================================================
 "                                Abbreviations
 "===============================================================================
@@ -69,7 +76,8 @@ nnoremap <leader>cf 81\|d$
 "                                   Templates
 "===============================================================================
 " Vim syntax for my fakeNewsAnalysis repository  
-autocmd BufRead,BufNewFile ~/fakeNewsAnalysis/*.[ch] source ~/fakeNewsAnalysis/pph_in_C/syntax.vim
+autocmd BufRead,BufNewFile ~/fakeNewsAnalysis/*.[ch]
+    \ source ~/fakeNewsAnalysis/pph_in_C/syntax.vim
 
 " Templates
 autocmd BufNewFile *.html :0read ~/.vim/ftplugin/html/template.html

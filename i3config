@@ -151,4 +151,5 @@ exec  --no-startup-id feh --bg-fill /home/rafael/Images/walpaper/shot0050.png
 bar {
     font pango:DejaVu Sans Mono 10
     status_command i3blocks
+    position top
 }
