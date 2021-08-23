@@ -53,3 +53,5 @@ gitsync () {
 # Set .local at PATH
 export PATH=$PATH:~/.local/bin
 
+# source shell scripts
+. ~/.shell/weather.sh

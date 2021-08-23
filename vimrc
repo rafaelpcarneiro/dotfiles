@@ -2,6 +2,8 @@
 "                           Standard Configurations
 "===============================================================================
 syntax on
+" t_Co forces vim to work with a pallete of colors within 256 shades of colors
+set t_Co=256
 set bg=dark
 
 " Tabs
@@ -40,6 +42,7 @@ let g:netrw_winsize = 25
 set colorcolumn=81
 "set textwidth=80
 hi ColorColumn ctermbg=235
+hi Folded      ctermbg=none
 
 
 
