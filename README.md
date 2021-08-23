@@ -23,6 +23,12 @@ All my config files are here. They are
     the configurations for the Urxvt terminal, regarding its
     appearance;
 
+- **xinitrc**:
+    script responsible to start the X server with startx
+
+- **shrc**:
+    shell script used on my freebsd
+
 
 **Obs1**: On the **xsession** file:
 1. I choose which window manager to launch 
