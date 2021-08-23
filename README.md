@@ -30,7 +30,7 @@ All my config files are here. They are
     shell script used on my freebsd
 
 
-**Obs1**: On the **xsession** file:
+**Obs1**: On the **xsession** and on **xinitrc** file:
 1. I choose which window manager to launch 
 2. I source the urxvt terminal configuration with the command *xrdb*
 3. I load the correct keyboard layout for my old thinkpad (pt-br). 
