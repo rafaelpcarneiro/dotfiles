@@ -87,6 +87,9 @@ autocmd BufNewFile         *.tex :0read ~/.vim/latex/template.tex
 autocmd BufNewFile,BufRead *.tex source ~/.vim/latex/displayLatexNicely.vim
 autocmd BufNewFile,BufRead *.tex source ~/.vim/latex/snippets.vim
 
+" Sh
+autocmd BufNewFile,BufRead *.sh  source ~/.vim/sh/syntax.vim
+
 " Templates
 autocmd BufNewFile *.html :0read ~/.vim/ftplugin/html/template.html
 autocmd BufNewFile *.pl   :0read ~/.vim/ftplugin/perl/template.pl
