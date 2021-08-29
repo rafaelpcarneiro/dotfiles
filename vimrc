@@ -28,7 +28,7 @@ set incsearch
 
 
 " Formatting paragraph -- needs the par program
-set formatprg=par
+set formatprg=fmt
 
 hi LineNr  ctermfg=gray
 hi Normal  ctermfg=255
@@ -42,7 +42,7 @@ let g:netrw_winsize = 25
 set colorcolumn=81
 "set textwidth=80
 hi ColorColumn ctermbg=235
-hi Folded      ctermbg=none
+hi Folded      ctermbg=none ctermfg=75
 
 
 
@@ -76,22 +76,21 @@ nnoremap <leader>P 0v$dk$pjdd
 
 
 "===============================================================================
-"                                   Templates
+"                         sourcing file configurations
 "===============================================================================
 " Vim syntax for my fakeNewsAnalysis repository  
 autocmd BufRead,BufNewFile ~/fakeNewsAnalysis/*.[ch]
     \ source ~/fakeNewsAnalysis/pph_in_C/syntax.vim
 
+" LaTeX
+autocmd BufNewFile         *.tex :0read ~/.vim/latex/template.tex 
+autocmd BufNewFile,BufRead *.tex source ~/.vim/latex/displayLatexNicely.vim
+autocmd BufNewFile,BufRead *.tex source ~/.vim/latex/snippets.vim
+
 " Templates
 autocmd BufNewFile *.html :0read ~/.vim/ftplugin/html/template.html
 autocmd BufNewFile *.pl   :0read ~/.vim/ftplugin/perl/template.pl
-autocmd BufNewFile *.tex  :0read ~/.vim/ftplugin/latex/template.tex 
 
-" Snippets
-autocmd BufNewFile,BufRead *.tex source ~/.vim/ftplugin/latex/snippets.vim
-
-" Settings
-autocmd BufNewFile,BufRead *.tex source ~/.vim/ftplugin/latex/settings.vim
 
 
 " My functions

@@ -10,12 +10,13 @@
 
 
 # some useful aliases
-alias h='fc -l'
 alias j=jobs
-alias m="$PAGER"
 alias ll='ls -laFo'
-alias l='ls -l'
-alias g='egrep -i'
+alias l='ls -lh'
+alias la='ls -a'
+
+alias ls='ls --color=auto -FG'
+alias gcc='gcc -Wall -Wextra  -Werror -ansi -pedantic -O3'
  
 # # be paranoid
 # alias cp='cp -ip'
@@ -35,11 +36,6 @@ PS1="\u@\h:\w \\$ "
 # Source startx -- IMPORTANT !
 [ `tty` = "/dev/ttyv0" ] && startx
 
-
-# My aliases
-alias ls='ls --color=auto -FG'
-
-alias gcc='gcc -Wall -Wextra  -Werror -ansi -pedantic -O3'
 
 
 # Function to synchronize github repository with my local machine, using
