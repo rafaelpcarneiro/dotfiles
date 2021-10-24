@@ -7,11 +7,13 @@ set t_Co=256
 set bg=dark
 
 " Tabs
+set expandtab
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set softtabstop=4
 set smartindent
 set autoindent
+" in case of problem run :retab to force all tabs to follow vim's config
 
 set nu
 
@@ -66,7 +68,7 @@ nnoremap H 0
 nnoremap L $
 
 " inseert the line where you are above
-nnoremap <leader>P 0v$dk$pjdd
+nnoremap <leader>P 0vwhd0v$dk$pj
 
 "===============================================================================
 "                                Abbreviations
