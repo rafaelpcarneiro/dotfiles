@@ -93,6 +93,10 @@ gitsync () {
 	git remote set-url origin "git@github.com:rafaelpcarneiro/$1.git"
 }
 
+gitclone () {
+	git clone "git@github.com:rafaelpcarneiro/$1.git"
+}
+
 # Set twitter credentials as environment variables
 # source .twitter_credentials
 
