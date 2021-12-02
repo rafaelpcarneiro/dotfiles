@@ -79,19 +79,23 @@ nnoremap <leader>P 0v$dk$pjdd
 "                         sourcing file configurations
 "===============================================================================
 " Vim syntax for my fakeNewsAnalysis repository  
-autocmd BufRead,BufNewFile ~/fakeNewsAnalysis/*.[ch]
-    \ source ~/fakeNewsAnalysis/pph_in_C/syntax.vim
+autocmd BufRead,BufNewFile ~/fakeNewsAnalysis/pph_in_C_v03/*.[ch]
+    \ source ~/fakeNewsAnalysis/pph_in_C_v03/syntax.vim
 
 " LaTeX
 autocmd BufNewFile         *.tex :0read ~/.vim/latex/template.tex 
 autocmd BufNewFile,BufRead *.tex source ~/.vim/latex/displayLatexNicely.vim
 autocmd BufNewFile,BufRead *.tex source ~/.vim/latex/snippets.vim
 
-" Templates
+" HTML
 autocmd BufNewFile         *.html :0read ~/.vim/html/template.html
 autocmd BufNewFile,BufRead *.html source ~/.vim/html/snippets.vim
 
-autocmd BufNewFile *.pl   :0read ~/.vim/perl/template.pl
+" Perl (need some changes!)
+autocmd BufNewFile         *.pl   :0read ~/.vim/perl/template.pl
+
+" Python
+autocmd BufNewFile         *.py   :0read ~/.vim/py/template.vim
 
 
 
