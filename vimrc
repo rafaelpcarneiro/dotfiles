@@ -25,7 +25,7 @@ set scrolloff=999
 
 set incsearch
 
-
+set foldmethod=marker
 
 " Formatting paragraph -- needs the par program
 set formatprg=fmt
@@ -96,6 +96,7 @@ autocmd BufNewFile         *.pl   :0read ~/.vim/perl/template.pl
 
 " Python
 autocmd BufNewFile         *.py   :0read ~/.vim/py/template.vim
+autocmd BufNewFile,BufRead *.py   source ~/.vim/py/config.vim
 
 
 
