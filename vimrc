@@ -45,7 +45,6 @@ hi ColorColumn ctermbg=235
 hi Folded      ctermbg=none ctermfg=75
 
 
-
 "===============================================================================
 "                                    Mappings
 "===============================================================================
@@ -65,8 +64,11 @@ nnoremap K 10k
 nnoremap H 0
 nnoremap L $
 
-" inseert the line where you are above
+" insert the line where you are above
 nnoremap <leader>P 0v$dk$pjdd
+
+" Show file's path
+nnoremap <leader>pwd :echo expand('%:p')<cr>
 
 "===============================================================================
 "                                Abbreviations
