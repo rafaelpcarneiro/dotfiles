@@ -100,6 +100,9 @@ autocmd BufNewFile         *.pl   :0read ~/.vim/perl/template.pl
 autocmd BufNewFile         *.py   :0read ~/.vim/py/template.vim
 autocmd BufNewFile,BufRead *.py   source ~/.vim/py/config.vim
 
+" Java
+autocmd BufNewFile         *.java source ~/.vim/java/template.vim
+autocmd BufNewFile,BufRead *.java source ~/.vim/java/snippets.vim
 
 
 " My functions

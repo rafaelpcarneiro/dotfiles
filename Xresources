@@ -1,10 +1,13 @@
 ! vim: set foldmethod=marker:
 
+! after configuring this file you must issue the
+! following command at the terminal: $ xrdb .Xresources
+
 !URxvt.font: 	  xft:DejaVu Sans Mono:style=Regular:pixelsize=17:antialias=true
 !URxvt.boldfont:   xft:DejaVu Sans Mono:style=Bold:pixelsize=17:antialias=true
 !URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=17:antialias=true
 
-! JuliaMono font great for typing math on the terminal (thinking on LaTeX)
+! JuliaMono font: great for typing math on terminal (thinking on LaTeX)
 !URxvt.font: 	  xft:JuliaMono:style=Regular:pixelsize=18:antialias=true
 !URxvt.boldfont:   xft:JuliaMono:style=Bold:pixelsize=18:antialias=true
 !URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=18:antialias=true
