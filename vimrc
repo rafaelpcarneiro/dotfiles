@@ -104,6 +104,9 @@ autocmd BufNewFile,BufRead *.py   source ~/.vim/py/config.vim
 autocmd BufNewFile         *.java source ~/.vim/java/template.vim
 autocmd BufNewFile,BufRead *.java source ~/.vim/java/snippets.vim
 
+" makefile
+autocmd BufNewFile,BufRead makefile set noexpandtab
+
 
 " My functions
 function! MyHFill() 

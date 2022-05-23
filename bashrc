@@ -98,7 +98,7 @@ gitclone () {
 }
 
 # Set twitter credentials as environment variables
-# source .twitter_credentials
+source .twitter_credentials.sh
 
 ##|--- Start screenfetch. When tmux is called screenfetch is ignored {{{1
 #if [ -z $TERM_PROGRAM ] || [ $TERM_PROGRAM != "tmux" ]
