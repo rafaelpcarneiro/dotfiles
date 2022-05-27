@@ -2,6 +2,12 @@
 "                           Standard Configurations
 "===============================================================================
 syntax on
+filetype plugin on
+set nocompatible
+
+" Plugins used
+" -> vimwiki 
+
 " t_Co forces vim to work with a pallete of colors within 256 shades of colors
 set t_Co=256
 set bg=dark
@@ -106,6 +112,9 @@ autocmd BufNewFile,BufRead *.java source ~/.vim/java/snippets.vim
 
 " makefile
 autocmd BufNewFile,BufRead makefile set noexpandtab
+ 
+" wiki
+autocmd BufNewFile,BufRead *.wiki source ~/.vim/wiki_plugin/table.vim
 
 
 " My functions
