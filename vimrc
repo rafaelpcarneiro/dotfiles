@@ -31,7 +31,7 @@ set scrolloff=999
 
 set incsearch
 
-set foldmethod=marker
+"set foldmethod=marker
 
 " Formatting paragraph -- needs the par program
 set formatprg=fmt
@@ -61,8 +61,8 @@ nnoremap <leader>ev :tabedit $MYVIMRC<cr>
 nnoremap <leader>sv :w<cr> :source $MYVIMRC<cr> :q<cr>
 nnoremap <leader>sf :w<cr> :source %<cr>
 
-nnoremap <leader>hf $:call MyHFill()<cr>
-nnoremap <leader>cf 81\|d$
+"nnoremap <leader>hf $:call MyHFill()<cr>
+"nnoremap <leader>cf 81\|d$
 
 " Movements
 nnoremap J 10j
@@ -71,17 +71,67 @@ nnoremap H 0
 nnoremap L $
 
 " insert the line where you are above
-nnoremap <leader>P 0v$dk$pjdd
+nnoremap <leader>P 0i   <esc>0/\<<cr>v$xk$pjdd
 
 " Show file's path
 nnoremap <leader>pwd :echo expand('%:p')<cr>
+
+""" open in a new tab a file whose name is the string where the cursor is
+function! MyOpenFile(fn)
+    let l:run = 'tabedit ' . a:fn
+    execute(l:run)
+endfunction
+    
+nnoremap <leader>o  "ayiW<esc>:let b:fn = getreg('a')<cr>
+    \ :call MyOpenFile(b:fn)<cr>
+
+" ~/.bashrc
 
 "===============================================================================
 "                                Abbreviations
 "===============================================================================
 "iabbrev ssig Rafael Polli carneiro 
- 
 
+
+
+
+
+"===============================================================================
+"                                Vimwiki
+"===============================================================================
+let wiki = {}                                                                  
+let wiki.path = '~/vimwiki/'                                                   
+let wiki.nested_syntaxes = {
+    \ 'python': 'python', 
+    \ 'c++': 'cpp',
+    \ 'vim': 'vim',
+    \ 'C'  : 'c',
+    \ 'Scala': 'scala'}
+
+let g:vimwiki_list = [wiki]                      
+"let g:vimwiki_folding = 'syntax'
+
+"" This function will open vfile links with vim 
+"" (sugested by vimwiki help)
+function! VimwikiLinkHandler(link)
+" Use Vim to open external files with the 'vfile:' scheme.  E.g.:
+"   1) [[vfile:~/Code/PythonProject/abc123.py]]
+"   2) [[vfile:./|Wiki Home]]
+let link = a:link
+if link =~# '^vfile:'
+    let link = link[1:]
+else
+    return 0
+endif
+let link_infos = vimwiki#base#resolve_link(link)
+if link_infos.filename == ''
+    echomsg 'Vimwiki Error: Unable to resolve link!'
+    return 0
+else
+    exe 'tabnew ' . fnameescape(link_infos.filename)
+    return 1
+endif
+endfunction
 
 "===============================================================================
 "                         sourcing file configurations
@@ -115,6 +165,7 @@ autocmd BufNewFile,BufRead makefile set noexpandtab
  
 " wiki
 autocmd BufNewFile,BufRead *.wiki source ~/.vim/wiki_plugin/table.vim
+autocmd BufNewFile,BufRead *.wiki source ~/.vim/wiki_plugin/config.vim
 
 
 " My functions
