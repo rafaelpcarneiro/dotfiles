@@ -35,3 +35,5 @@ All my config files are here. They are
 2. I source the urxvt terminal configuration with the command *xrdb*
 3. I load the correct keyboard layout for my old thinkpad (pt-br). 
 4. I switch ESC for CAPSLOCK and viceversa -- it is handy for VIM
+
+
