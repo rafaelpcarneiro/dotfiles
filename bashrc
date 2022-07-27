@@ -77,7 +77,7 @@ print_ps1() {
 		__ps1+="$_light_cyan""--[!Jobs=$_jobs]""$_close_color"
 	fi
 
-	__ps1+="\n┗▶λ "
+	__ps1+="\n┗▶$ "
 
 	echo -e "$__ps1"
 	#2}}}
@@ -111,7 +111,7 @@ source .twitter_credentials.sh
 # Set .local at PATH
 export PATH=$PATH:~/.local/bin
 
-# titanio_cluster on/off
+# titanio_cluster on/off + some functions {{{1
 titanio_cluster () {
     if [ $# -eq 0 ]; then
         echo "Argument empty is not valid. It must have as arguments the values (on/off)"
@@ -131,4 +131,34 @@ titanio_cluster () {
             echo "Arguments valid are: on/off"
         fi
     fi
+#1}}}
+
+# Set terminal font to be for math or programming {{{1
+mathfont () {
+    local regular_font="xft:JuliaMono:style=Regular:pixelsize=18:antialias=true"
+    local bold_font="xft:JuliaMono:style=Bold:pixelsize=18:antialias=true"
+    local italic_font="xft:DejaVu Sans Mono:style=Italic:pixelsize=18:antialias=true"
+
+    sed "s/REGULAR_FONT/$regular_font/" \
+        dotfiles/Xresources.template > ~/.Xresources
+
+    sed -i "s/REGULAR_FONT/$bold_font/"   ~/.Xresources
+    sed -i "s/REGULAR_FONT/$italic_font/" ~/.Xresources
+
+    xrdb ~/.Xresources
 }
+
+hackfont () {
+    local regular_font="xft:Hack Nerd Font Mono:style=Regular:pixelsize=17:antialias=true"
+    local bold_font="xft:Hack Nerd Font Mono:style=Bold:pixelsize=17:antialias=true"
+    local italic_font="xft:Hack Nerd Font Mono:style=Italic:pixelsize=17:antialias=true"
+
+    sed "s/REGULAR_FONT/$regular_font/" \
+        dotfiles/Xresources.template > ~/.Xresources
+
+    sed -i "s/REGULAR_FONT/$bold_font/"   ~/.Xresources
+    sed -i "s/REGULAR_FONT/$italic_font/" ~/.Xresources
+
+    xrdb ~/.Xresources
+}
+# 1}}}
