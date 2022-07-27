@@ -131,6 +131,7 @@ titanio_cluster () {
             echo "Arguments valid are: on/off"
         fi
     fi
+}
 #1}}}
 
 # Set terminal font to be for math or programming {{{1

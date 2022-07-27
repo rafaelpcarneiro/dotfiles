@@ -8,7 +8,7 @@ URxvt.font: 	  <REGULAR_FONT>
 URxvt.boldfont:   <BOLD_FONT>
 URxvt.italicfont: <ITALIC_FONT>
 
-!URxvt.letterSpace: -1
+URxvt.letterSpace: -1
 
 URxvt.scrollBar:   False
 URxvt.cursorBlink: True
