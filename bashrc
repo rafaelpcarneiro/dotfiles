@@ -63,9 +63,9 @@ print_ps1() {
 	#}}}
 
 	#|--- Printing ps1 {{{2
-	local __ps1="┏"
+	#local __ps1="┏"
 
-	__ps1+="$_red""[$_u@$_h $_W]""$_close_color"
+	local __ps1="$_red""[$_u@$_h $_W]""$_close_color"
 
 	if [ "$gitBranch" != "NULL" ]
 	then
@@ -77,7 +77,7 @@ print_ps1() {
 		__ps1+="$_light_cyan""--[!Jobs=$_jobs]""$_close_color"
 	fi
 
-	__ps1+="\n┗▶\$ "
+	__ps1+="\n┗▶λ "
 
 	echo -e "$__ps1"
 	#2}}}
