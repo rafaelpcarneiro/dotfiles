@@ -139,11 +139,11 @@ mathfont () {
     local bold_font="xft:JuliaMono:style=Bold:pixelsize=18:antialias=true"
     local italic_font="xft:DejaVu Sans Mono:style=Italic:pixelsize=18:antialias=true"
 
-    sed "s/REGULAR_FONT/$regular_font/" \
+    sed "s/<REGULAR_FONT>/$regular_font/" \
         dotfiles/Xresources.template > ~/.Xresources
 
-    sed -i "s/REGULAR_FONT/$bold_font/"   ~/.Xresources
-    sed -i "s/REGULAR_FONT/$italic_font/" ~/.Xresources
+    sed -i "s/<BOLD_FONT>/$bold_font/"     ~/.Xresources
+    sed -i "s/<ITALIC_FONT>/$italic_font/" ~/.Xresources
 
     xrdb ~/.Xresources
 }
@@ -153,11 +153,11 @@ hackfont () {
     local bold_font="xft:Hack Nerd Font Mono:style=Bold:pixelsize=17:antialias=true"
     local italic_font="xft:Hack Nerd Font Mono:style=Italic:pixelsize=17:antialias=true"
 
-    sed "s/REGULAR_FONT/$regular_font/" \
+    sed "s/<REGULAR_FONT>/$regular_font/" \
         dotfiles/Xresources.template > ~/.Xresources
 
-    sed -i "s/REGULAR_FONT/$bold_font/"   ~/.Xresources
-    sed -i "s/REGULAR_FONT/$italic_font/" ~/.Xresources
+    sed -i "s/<BOLD_FONT>/$bold_font/"     ~/.Xresources
+    sed -i "s/<ITALIC_FONT>/$italic_font/" ~/.Xresources
 
     xrdb ~/.Xresources
 }
