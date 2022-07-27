@@ -8,14 +8,14 @@
 !URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=17:antialias=true
 
 ! JuliaMono font: great for typing math on terminal (thinking on LaTeX)
-!URxvt.font: 	  xft:JuliaMono:style=Regular:pixelsize=18:antialias=true
-!URxvt.boldfont:   xft:JuliaMono:style=Bold:pixelsize=18:antialias=true
-!URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=18:antialias=true
+URxvt.font: 	  xft:JuliaMono:style=Regular:pixelsize=18:antialias=true
+URxvt.boldfont:   xft:JuliaMono:style=Bold:pixelsize=18:antialias=true
+URxvt.italicfont: xft:DejaVu Sans Mono:style=Italic:pixelsize=18:antialias=true
 
 ! Hack Nerd Font -> for programming languages
-URxvt.font: 	  xft:Hack Nerd Font Mono:style=Regular:pixelsize=17:antialias=true
-URxvt.boldfont:   xft:Hack Nerd Font Mono:style=Bold:pixelsize=17:antialias=true
-URxvt.italicfont: xft:Hack Nerd Font Mono:style=Italic:pixelsize=17:antialias=true
+!URxvt.font: 	  xft:Hack Nerd Font Mono:style=Regular:pixelsize=17:antialias=true
+!URxvt.boldfont:   xft:Hack Nerd Font Mono:style=Bold:pixelsize=17:antialias=true
+!URxvt.italicfont: xft:Hack Nerd Font Mono:style=Italic:pixelsize=17:antialias=true
 
 !URxvt.letterSpace: -1
 

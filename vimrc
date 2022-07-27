@@ -100,19 +100,23 @@ nnoremap <leader>o  "ayiW<esc>:let b:fn = getreg('a')<cr>
 "                                Vimwiki
 "===============================================================================
 let wiki = {}                                                                  
-let wiki.path = '~/vimwiki/'                                                   
+let wiki.path = '~/vimwiki/'
 let wiki.nested_syntaxes = {
-    \ 'python': 'python', 
-    \ 'c++': 'cpp',
-    \ 'vim': 'vim',
-    \ 'C'  : 'c',
-    \ 'Scala': 'scala'}
+    \ 'language-python': 'python', 
+    \ 'c++'            : 'cpp',
+    \ 'language-vim'   : 'vim',
+    \ 'C'              : 'c',
+    \ 'language-scala' : 'scala',
+    \ 'Terminal'       : 'sh',
+    \ 'language-bash'  : 'sh'}
+
+let wiki.template_path    = '~/vimwiki/templates/'
+let wiki.template_default = 'default'
+let wiki.template_ext     = '.html'
 
 let g:vimwiki_list = [wiki]                      
 "let g:vimwiki_folding = 'syntax'
 
-"" This function will open vfile links with vim 
-"" (sugested by vimwiki help)
 function! VimwikiLinkHandler(link)
 " Use Vim to open external files with the 'vfile:' scheme.  E.g.:
 "   1) [[vfile:~/Code/PythonProject/abc123.py]]
