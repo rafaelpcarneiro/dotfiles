@@ -141,7 +141,7 @@ mathfont () {
     local italic_font="xft:DejaVu Sans Mono:style=Italic:pixelsize=18:antialias=true"
 
     sed "s/<REGULAR_FONT>/$regular_font/" \
-        dotfiles/Xresources.template > ~/.Xresources
+        ~/dotfiles/Xresources.template > ~/.Xresources
 
     sed -i "s/<BOLD_FONT>/$bold_font/"     ~/.Xresources
     sed -i "s/<ITALIC_FONT>/$italic_font/" ~/.Xresources
@@ -155,7 +155,7 @@ hackfont () {
     local italic_font="xft:Hack Nerd Font Mono:style=Italic:pixelsize=17:antialias=true"
 
     sed "s/<REGULAR_FONT>/$regular_font/" \
-        dotfiles/Xresources.template > ~/.Xresources
+        ~/dotfiles/Xresources.template > ~/.Xresources
 
     sed -i "s/<BOLD_FONT>/$bold_font/"     ~/.Xresources
     sed -i "s/<ITALIC_FONT>/$italic_font/" ~/.Xresources
