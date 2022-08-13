@@ -71,7 +71,8 @@ nnoremap H 0
 nnoremap L $
 
 " insert the line where you are above
-nnoremap <leader>P 0i   <esc>0/\<<cr>v$xk$pjdd
+"nnoremap <leader>P 0i   <esc>0/\<<cr>hd$k$p
+nnoremap <leader>P 0i   <esc>0whd$k$p
 
 " Show file's path
 nnoremap <leader>pwd :echo expand('%:p')<cr>

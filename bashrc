@@ -134,7 +134,7 @@ titanio_cluster () {
 }
 #1}}}
 
-# Set terminal font to be for math or programming {{{1
+# Set terminal font so I can nicely type LaTex code or for programming codes {{{1
 mathfont () {
     local regular_font="xft:JuliaMono:style=Regular:pixelsize=18:antialias=true"
     local bold_font="xft:JuliaMono:style=Bold:pixelsize=18:antialias=true"
@@ -161,5 +161,82 @@ hackfont () {
     sed -i "s/<ITALIC_FONT>/$italic_font/" ~/.Xresources
 
     xrdb ~/.Xresources
+}
+# 1}}}
+
+# Convert pdf to png {{{1
+pdftopng () {
+    if [ $# -eq 0 ]; then
+        echo "pdftopng must be followed by the flags below:"
+        echo ""
+        echo "-f filename"
+        echo "    Mandatory flag with 'filename' as its value."
+        echo "    --------------------------------------------"
+        echo "    This flag sets which file must be converted to png;"
+        echo ""
+        echo "-t"
+        echo "    Optional flag whose value is not needed."
+        echo "    ----------------------------------------"
+        echo "    This flag tells the script whether or not it should set the "
+        echo "    background as transparent. In case the flag is not provided"
+        echo "    then nothing is done regarding to the backgroung."
+        echo ""
+        echo "-r dim0xdim1"
+        echo "    Optional flag whose value cannot be empty"
+        echo "    -----------------------------------------"
+        echo "    This flag tells the script to resize the original image so the"
+        echo "    new image will be a matriz M of 'dim0' rows and 'dim1' colunmns."
+        echo "    Note: row and column values must be separated by the char 'x' "
+        echo "    and there must be none space between them."
+        echo ""
+
+
+    else
+        local pdfFile=""
+        local pdfName=""
+        local transparency=""
+        local resize=""
+        while getopts "f:tr:"  flag; do
+            case $flag in
+                f) pdfFile="${OPTARG}"
+                   pdfName=`expr "$pdfFile" : "\(.\+\).pdf"`
+                   if [ -z "$pdfName" ]; then
+                       echo "File must be a pdf"
+
+                       #Reset OPTIND
+                       OPTIND=0
+
+                       return 1
+                   fi
+                   ;;
+                t) transparency="-transparent white"
+                   ;;
+                r) resize="${OPTARG}"
+                   dim0=`expr "$resize" : "\([0-9]\+\)x.*"`
+                   dim1=`expr "$resize" : ".*x\([0-9]\+\)"`
+                   if [[ -z $dim0 || -z $dim1 ]]; then 
+                       echo "Resize must be something like:"
+                       echo "   1200x900 or 700x240 or ..."
+                       echo "but cannot accept ${resize} as argument"
+
+                       #Reset OPTIND
+                       OPTIND=0
+
+                       return 1
+                   fi
+                   resize="-resize ${resize}"
+                   ;;
+            esac
+        done
+
+        pdftoppm  $pdfFile -jpegopt quality=100 -jpeg $pdfName
+
+        #convert ${file//.pdf/-1.jpg} -transparent white -resize 1100x400 ${file//pdf/png}
+        convert "${pdfName}-1.jpg" -quality 100 $transparency $resize "${pdfName}.png"
+        rm "${pdfName}"*.jpg
+
+        #Reset OPTIND
+        OPTIND=0
+    fi
 }
 # 1}}}
