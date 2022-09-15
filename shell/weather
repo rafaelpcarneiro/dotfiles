@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env bash
 
 weather () {
         # Location Santana, SP - Brazil

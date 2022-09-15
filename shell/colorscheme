@@ -1,0 +1,27 @@
+# Color Scheme reference to be used in conjunction with echo
+# on shell
+
+local _black="\e[0;30m"
+local _red="\e[0;31m"
+local _green="\e[0;32m"
+local _brown="\e[0;33m"
+local _blue="\e[0;34m"
+local _purple="\e[0;35m"
+local _cyan="\e[0;36m"
+local _light_gray="\e[0;37m"
+
+local _dark_gray="\e[1;30m"
+local _light_red="\e[1;31m"
+local _light_green="\e[1;32m"
+local _yellow="\e[1;33m"
+local _light_blue="\e[1;34m"
+local _light_purple="\e[1;35m"
+local _light_cyan="\e[1;36m"
+
+local _white="\e[1;37m"
+
+local _close_color="\e[m"
+
+#|--- Background color
+local _bggreen="\e[42m"
+local _bgyellow="\e[43m"

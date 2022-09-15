@@ -7,5 +7,8 @@ setxkbmap -option caps:swapescape
 # source the .Xresources
 xrdb .Xresources 
 
+# Load the emacsclient daemon
+# exec emacsclient -a "" -c
 
-exec i3 
+
+exec i3
