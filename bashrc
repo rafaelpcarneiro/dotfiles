@@ -36,3 +36,6 @@ fi
 if [ -f '/home/rafael/gcloud/google-cloud-sdk/completion.bash.inc' ]; then
    . '/home/rafael/gcloud/google-cloud-sdk/completion.bash.inc';
 fi
+
+
+#import -window root file.png
