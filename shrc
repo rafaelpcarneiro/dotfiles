@@ -9,14 +9,22 @@
 #
 
 
-# some useful aliases
-alias j=jobs
-alias ll='ls -laFo'
-alias l='ls -lh'
-alias la='ls -a'
+# file permissions: rwxr-xr-x
+#
+# umask	022
 
-alias ls='ls --color=auto -FG'
-alias gcc='gcc -Wall -Wextra  -Werror -ansi -pedantic -O3'
+# Uncomment this to enable the builtin vi(1) command line editor in sh(1),
+# e.g. ESC to go into visual mode.
+# set -o vi
+
+
+# some useful aliases
+alias h='fc -l'
+alias j=jobs
+alias m="$PAGER"
+alias ll='ls -laFo'
+alias l='ls -l'
+alias g='egrep -i'
  
 # # be paranoid
 # alias cp='cp -ip'
@@ -30,24 +38,7 @@ PS1="\u@\h:\w \\$ "
 # search path for cd(1)
 # CDPATH=:$HOME
 
-# Setting the correct keyboard layout
-#kbdcontrol -l ~/.config/keyboard_tty/br275.thinkpad.kbd
-
-# Source startx -- IMPORTANT !
-[ `tty` = "/dev/ttyv0" ] && startx
-
-
-
-# Function to synchronize github repository with my local machine, using
-# ssh
-gitsync () {
-	git remote add     origin "https://github.com/rafaelpcarneiro/$1.git"
-	git remote set-url origin "git@github.com:rafaelpcarneiro/$1.git"
-}
-
-
-# Set .local at PATH
-export PATH=$PATH:~/.local/bin
-
-# source shell scripts
-. ~/.shell/weather.sh
+### ENV VARIABLES
+export TTY_NUMBER=$(expr "$(tty)" : ".*ttyv\(.\)")
+export DOTFILES="${HOME}/GithubProjects/dotfiles"
+export PATH=$PATH:~/.local/bin:~/.emacs.d/bin
