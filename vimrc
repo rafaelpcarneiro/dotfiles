@@ -10,7 +10,7 @@ let mapleader = "-"
 nnoremap <leader>v :tabedit ~/.dotfiles/vimrc<cr>
 nnoremap <leader>b :tabedit ~/.dotfiles/bashrc<cr>
 nnoremap <leader>n <plug>NERDTreeTabsToggle<CR>
-nnoremap <leader>q :wq<cr>
+nnoremap <leader>q :q<cr>
 
 nnoremap <leader>s  :sp<cr>
 nnoremap <leader><leader> :vsp<cr>
@@ -30,6 +30,7 @@ call vundle#begin()
 	Plugin 'nvie/vim-flake8'          " Pep 8
 	Plugin 'scrooloose/nerdtree'      " nerdtree
 	Plugin 'jistr/vim-nerdtree-tabs'  " nerdtree working with tabs
+    "Plugin 'vim-airline/vim-airline'  " statusline
 	"Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'} " status bar
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,8 +46,7 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
-au BufNewFile,BufRead *.js, *.html, *.css
+au BufNewFile,BufRead *.js,*.html,*.css
     \ set tabstop=2 |
     \ set softtabstop=2 |
     \ set shiftwidth=2
-
