@@ -4,13 +4,13 @@ filetype off                  " required
 set encoding=utf-8
 
 let mapleader = "-"
-nnoremap <leader><leader> :tabedit ~/.dotfiles/vimrc<cr>
+nnoremap <leader>v :tabedit ~/.dotfiles/vimrc<cr>
 nnoremap <leader>b :tabedit ~/.dotfiles/bashrc<cr>
 nnoremap <leader>n <plug>NERDTreeTabsToggle<CR>
 nnoremap <leader>q :wq<cr>
 
-nnoremap <leader>s :sp<cr>
-nnoremap <leader>v :vsp<cr>
+nnoremap <leader>s  :sp<cr>
+nnoremap <leader><leader> :vsp<cr>
 
 nnoremap <space>ww <c-w>w
 nnoremap <space>wj <c-w>j
