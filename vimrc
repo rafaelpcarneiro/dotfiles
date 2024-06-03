@@ -2,6 +2,9 @@ syntax on
 set nocompatible              " required
 filetype off                  " required
 set encoding=utf-8
+set tabstop=4 
+set shiftwidth=4 
+set expandtab
 
 let mapleader = "-"
 nnoremap <leader>v :tabedit ~/.dotfiles/vimrc<cr>
