@@ -19,6 +19,11 @@ nnoremap <space>ww <c-w>w
 nnoremap <space>wj <c-w>j
 nnoremap <space>wl <c-w>l
 nnoremap <space>wh <c-w>h
+
+nnoremap < <c-w><
+nnoremap > <c-w>>
+nnoremap + <c-w>+
+nnoremap = <c-w>-
 au FileType vim nnoremap <leader>c :w<cr> :source %<cr> :q<cr>
 
 
