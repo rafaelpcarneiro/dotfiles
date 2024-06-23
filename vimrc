@@ -5,6 +5,7 @@ set encoding=utf-8
 set tabstop=4 
 set shiftwidth=4 
 set expandtab
+set smartindent
 set foldmethod=indent
 hi Folded ctermbg=233
 hi Folded ctermfg=241
